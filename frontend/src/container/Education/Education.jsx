@@ -1,7 +1,8 @@
 import React from "react";
 
+import { AppWrap } from "../../wrapper";
 import "./Education.scss";
 
 const Education = () => {};
 
-export default Education;
+export default AppWrap(Education, "education");

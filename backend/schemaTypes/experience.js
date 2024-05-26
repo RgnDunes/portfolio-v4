@@ -21,27 +21,34 @@ export default {
     {
       name: 'journey',
       title: 'Journey',
-      type: 'object',
-      fields: [
+      type: 'array',
+      of: [
         {
-          name: 'designation',
-          title: 'Designation',
-          type: 'string',
-        },
-        {
-          name: 'location',
-          title: 'Location',
-          type: 'string',
-        },
-        {
-          name: 'description',
-          title: 'Description',
-          type: 'string',
-        },
-        {
-          name: 'tenure',
-          title: 'Tenure',
-          type: 'string',
+          name: 'detail',
+          title: 'Detail',
+          type: 'object',
+          fields: [
+            {
+              name: 'designation',
+              title: 'Designation',
+              type: 'string',
+            },
+            {
+              name: 'location',
+              title: 'Location',
+              type: 'string',
+            },
+            {
+              name: 'description',
+              title: 'Description',
+              type: 'string',
+            },
+            {
+              name: 'tenure',
+              title: 'Tenure',
+              type: 'string',
+            },
+          ],
         },
       ],
     },
@@ -54,18 +61,25 @@ export default {
     {
       name: 'awards',
       title: 'Awards',
-      type: 'object',
-      fields: [
+      type: 'array',
+      of: [
         {
-          name: 'awardImage',
-          title: 'AwardImg',
-          type: 'image',
-          options: {hotspot: true},
-        },
-        {
-          name: 'awardImageLabel',
-          title: 'AwardImgLabel',
-          type: 'string',
+          name: 'detail',
+          title: 'Detail',
+          type: 'object',
+          fields: [
+            {
+              name: 'image',
+              title: 'Image',
+              type: 'image',
+              options: {hotspot: true},
+            },
+            {
+              name: 'imageLabel',
+              title: 'Image Label',
+              type: 'string',
+            },
+          ],
         },
       ],
     },

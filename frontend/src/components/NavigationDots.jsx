@@ -1,9 +1,11 @@
 import React from "react";
 
+import { NAV_ITEMS } from "./constants";
+
 const NavigationDots = ({ active }) => {
   return (
     <div className="app__navigation">
-      {["home", "about", "contact", "experience", "skills"].map((item, idx) => (
+      {NAV_ITEMS.map((item, idx) => (
         <a
           href={`#${item}`}
           key={item + idx}
