@@ -7,12 +7,11 @@ import {
   Certifications,
   Contact,
   Education,
-  Experience,
   Header,
   Hobbies,
   Projects,
   Recommendations,
-  Skills,
+  SkillsExperiences,
 } from "./container";
 
 import "./App.scss";
@@ -23,8 +22,7 @@ const App = () => {
       <Navbar />
       <Header />
       <About />
-      <Skills />
-      <Experience />
+      <SkillsExperiences />
       <Education />
       <Projects />
       <Recommendations />

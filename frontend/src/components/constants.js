@@ -1,8 +1,7 @@
 export const NAV_ITEMS = [
   "home",
   "about",
-  "experience",
-  "skills",
+  "experiences",
   "education",
   "articles",
   "projects",

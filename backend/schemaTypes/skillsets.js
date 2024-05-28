@@ -9,6 +9,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'bgColor',
+      title: 'Background Color',
+      type: 'string',
+    },
+    {
       name: 'image',
       title: 'Img',
       type: 'image',
