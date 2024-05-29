@@ -86,5 +86,5 @@ const Recommendations = () => {
 export default AppWrap(
   MotionWrap(Recommendations, "app__testimonial"),
   "recommendations",
-  "app__primarybg"
+  "app__whitebg"
 );
