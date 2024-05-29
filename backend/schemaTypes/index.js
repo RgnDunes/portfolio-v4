@@ -7,6 +7,7 @@ import hobbiesSchema from './hobbies'
 import certificationsSchema from './certifications'
 import articlesSchema from './articles'
 import aboutsSchema from './abouts'
+import contactSchema from './contact'
 
 export const schemaTypes = [
   recommendationsSchema,
@@ -18,4 +19,5 @@ export const schemaTypes = [
   certificationsSchema,
   articlesSchema,
   aboutsSchema,
+  contactSchema,
 ]
