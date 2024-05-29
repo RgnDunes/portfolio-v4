@@ -5,7 +5,6 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
-// import { Tooltip as ReactTooltip } from "react-tooltip";
 
 import "./Recommendations.scss";
 
@@ -31,7 +30,11 @@ const Recommendations = () => {
     <>
       {recommendations.length && (
         <>
-          <div
+          <motion.div
+            key={`${currentTestimonial.name}-${currentTestimonial.designation}`}
+            whileInView={{ opacity: [0, 1], scale: [0, 1] }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            exit={{ opacity: [1, 0], scale: [1, 0] }}
             className="app__testimonial-item app__flex"
             style={{ flexDirection: "column" }}
           >
@@ -50,7 +53,7 @@ const Recommendations = () => {
                 <h5 className="p-text">{currentTestimonial.designation}</h5>
               </div>
             </div>
-          </div>
+          </motion.div>
           <div className="app__testimonial-btns app__flex">
             <div
               className="app__flex"
