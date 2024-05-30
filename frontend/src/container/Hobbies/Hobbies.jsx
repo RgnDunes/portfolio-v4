@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 
@@ -69,28 +70,33 @@ const Hobbies = () => {
 
   return (
     <>
-      <h2 className="head-text">
-        My <span>Hobbies</span> <br />
-        <div className="app__work-filter app__flex">
-          {hobbyList.map((item, idx) => (
-            <div
-              key={idx}
-              onClick={() => handleHobbyFilter(item)}
-              className={`app__work-filter-item app__flex p-text ${
-                activeHobby === item ? "item-active" : ""
-              }`}
-            >
-              {item}
-            </div>
-          ))}
-        </div>
+      <div className="app__flex" style={{ flexDirection: "column" }}>
+        <h2 className="head-text">
+          My <span>Hobbies</span> <br />
+          <div className="app__work-filter app__flex">
+            {hobbyList.map((item, idx) => (
+              <div
+                key={idx}
+                onClick={() => handleHobbyFilter(item)}
+                className={`app__work-filter-item app__flex p-text ${
+                  activeHobby === item ? "item-active" : ""
+                }`}
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+        </h2>
         {!isLoading ? (
           <motion.div
             whileInView={{ opacity: [0, 1], scale: [0, 1] }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
             exit={{ opacity: [1, 0], scale: [1, 0] }}
             className="masonry-layout-content"
-            style={{ backgroundColor: "#fef4f5", borderRadius: "7px" }}
+            style={{
+              backgroundColor: "var(--white-color)",
+              borderRadius: "7px",
+            }}
           >
             {(activeHobbyDetails.length > 20
               ? activeHobbyDetails.slice(0, 20)
@@ -121,7 +127,7 @@ const Hobbies = () => {
             and many more...
           </div>
         </div>
-      </h2>
+      </div>
     </>
   );
 };
@@ -129,5 +135,5 @@ const Hobbies = () => {
 export default AppWrap(
   MotionWrap(Hobbies, "app__hobbies"),
   "hobbies",
-  "app__primarybg"
+  "app__whitebg"
 );

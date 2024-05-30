@@ -7,8 +7,40 @@
   background-color: var(--white-color);
 }
 
+.app__pinkbg {
+  background-color: var(--pink-color);
+}
+
 .app__primarybg {
   background-color: var(--primary-color);
+}
+
+.app__lightbluebg {
+  background-color: var(--light-blue-color);
+}
+
+.app__softgreenbg {
+  background-color: var(--soft-green-color);
+}
+
+.app__lightgreybg {
+  background-color: var(--light-grey-color);
+}
+
+.app__beigebg {
+  background-color: var(--beige-color);
+}
+
+.app__lightyellowbg {
+  background-color: var(--light-yellow-color);
+}
+
+.app__lavenderbg {
+  background-color: var(--lavender-color);
+}
+
+.app__softorangebg {
+  background-color: var(--soft-orange-color);
 }
 
 .app__container {
@@ -29,10 +61,10 @@
   flex: 1;
   width: 100%;
   flex-direction: column;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
 
   @media screen and (max-width: 450px) {
-    padding: 4rem 1rem 2rem;
+    padding: 2rem 1rem 1rem;
   }
 }
 
@@ -237,7 +269,6 @@
   position: relative;
   column-count: 4;
   padding: 20px;
-  background: var(--light);
 }
 
 @media (max-width: 768px) {
@@ -262,7 +293,6 @@
   display: inline-block;
   margin-bottom: 10px;
   overflow: hidden;
-  border: 3px solid #fff;
   opacity: 0.6;
 }
 

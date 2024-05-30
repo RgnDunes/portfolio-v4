@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-
 import { motion } from "framer-motion";
+
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
-// import { Tooltip as ReactTooltip } from "react-tooltip";
 
 import "./SkillsExperiences.scss";
 
@@ -54,7 +53,6 @@ const Skills = () => {
               <div
                 className="app__flex chain-container"
                 style={{ justifyContent: "flex-start" }}
-                // data-tooltip-id={experience.org}
               >
                 <motion.div
                   whileInView={{ opacity: [0, 1] }}
@@ -83,15 +81,6 @@ const Skills = () => {
                   </p>
                 </motion.div>
                 <div class="chain chain-bottom"></div>
-                {/* <ReactTooltip
-                id={experience.org}
-                effect="solid"
-                arrowColor="dodgerblue"
-                className="skills-tooltip"
-                content={experience.totalTenure}
-                delayHide={0.5}
-                delayShow={0.5}
-              /> */}
               </div>
             ))}
           </div>
@@ -104,5 +93,5 @@ const Skills = () => {
 export default AppWrap(
   MotionWrap(Skills, "app__skills"),
   "experiences",
-  "app__primarybg"
+  "app__lightbluebg"
 );

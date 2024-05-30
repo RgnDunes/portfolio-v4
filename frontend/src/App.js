@@ -23,10 +23,10 @@ const App = () => {
       <Header />
       <About />
       <SkillsExperiences />
-      <Education />
       <Projects />
-      <Recommendations />
+      <Education />
       <Articles />
+      <Recommendations />
       <Certifications />
       <Hobbies />
       <Contact />

@@ -3,13 +3,21 @@
 :root {
   --font-base: "DM Sans", sans-serif;
 
-  --primary-color: #edf2f8;
   --secondary-color: #313bac;
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
   --gray-color: #6b7688;
   --brown-color: #46364a;
   --white-color: #ffffff;
+  --primary-color: #edf2f8;
+  --pink-color: #fef4f5;
+  --light-blue-color: #d0e4f7;
+  --soft-green-color: #dfece6;
+  --light-grey-color: #eaeaea;
+  --beige-color: #f5f0e6;
+  --light-yellow-color: #faf9e1;
+  --lavender-color: #e7e3f3;
+  --soft-orange-color: #f9e6d1;
 }
 
 * {

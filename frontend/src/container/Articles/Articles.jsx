@@ -6,22 +6,41 @@ import { urlFor, client } from "../../client";
 import "./Articles.scss";
 
 const Articles = () => {
-  const [articles, setArticles] = useState([]);
+  const [allArticles, setAllArticles] = useState([]);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     const query = '*[_type == "articles"]';
 
     client.fetch(query).then((data) => {
-      setArticles(data);
+      setAllArticles(data);
     });
   }, []);
+
+  const handleFilteredArticles = () => {
+    setShowAll(!showAll);
+  };
+
   return (
     <>
       <h2 className="head-text">
         My <span>Articles</span> <br />
       </h2>
+      <div
+        className="app__work-filter app__flex"
+        onClick={handleFilteredArticles}
+      >
+        <div className="app__work-filter-item app__flex p-text item-active">
+          {showAll ? "See less" : `See all ${allArticles.length} articles.`}
+        </div>
+      </div>
       <div className="app__flex" style={{ flexWrap: "wrap" }}>
-        {articles.map((article) => (
+        {(showAll
+          ? allArticles
+          : allArticles.length > 6
+          ? allArticles.slice(0, 6)
+          : allArticles
+        ).map((article) => (
           <div
             className="app__article-item app__flex"
             style={{ margin: "2rem", maxWidth: "500px" }}
@@ -64,5 +83,5 @@ const Articles = () => {
 export default AppWrap(
   MotionWrap(Articles, "app__articles"),
   "articles",
-  "app__primarybg"
+  "app__lightbluebg"
 );

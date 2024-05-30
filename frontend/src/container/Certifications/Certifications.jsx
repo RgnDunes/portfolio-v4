@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-
 import { motion } from "framer-motion";
+
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 
@@ -60,5 +60,5 @@ const Certifications = () => {
 export default AppWrap(
   MotionWrap(Certifications, "app__testimonial"),
   "certifications",
-  "app__whitebg"
+  "app__lightgreybg"
 );

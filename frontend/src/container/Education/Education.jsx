@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-
 import { motion } from "framer-motion";
+
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
+
 import "./Education.scss";
 
 const Education = () => {
@@ -71,5 +72,5 @@ const Education = () => {
 export default AppWrap(
   MotionWrap(Education, "app__education"),
   "education",
-  "app__whitebg"
+  "app__lightgreybg"
 );

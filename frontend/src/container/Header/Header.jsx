@@ -1,8 +1,7 @@
 import React from "react";
-
 import { motion } from "framer-motion";
-import { images } from "../../constants";
 
+import { images } from "../../constants";
 import { AppWrap } from "../../wrapper";
 
 import "./Header.scss";
@@ -30,7 +29,7 @@ const Header = () => {
           <div className="badge-cmp app__flex">
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hello, I am</p>
+              <p className="p-text">Voilà! I am</p>
               <h1 className="head-text">Divyansh Singh</h1>
             </div>
           </div>

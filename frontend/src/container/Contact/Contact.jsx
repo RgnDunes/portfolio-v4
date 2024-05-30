@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 
-// import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client";
-import { images } from "../../constants";
-
-// import { BiLogoGmail } from "react-icons/bi";
 import { CgMail } from "react-icons/cg";
 import { BsTelephoneOutbound } from "react-icons/bs";
 
@@ -56,14 +52,12 @@ const Contact = () => {
       </h2>
       <div className="app__footer-cards">
         <div className="app__footer-card">
-          {/* <img src={images.email} alt="email" /> */}
           <CgMail />
           <a href="mailto:rgndunes@gmail.com" className="p-text">
             rgndunes@gmail.com
           </a>
         </div>
         <div className="app__footer-card">
-          {/* <img src={images.mobile} alt="mobile" /> */}
           <BsTelephoneOutbound />
           <a href="tel:+917394926646" className="p-text">
             +91 7394 926646
@@ -118,5 +112,5 @@ const Contact = () => {
 export default AppWrap(
   MotionWrap(Contact, "app__footer"),
   "contact",
-  "app__whitebg"
+  "app__lightbluebg"
 );
