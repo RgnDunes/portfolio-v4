@@ -4,6 +4,11 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'id',
+      title: 'ID',
+      type: 'number',
+    },
+    {
       name: 'org',
       title: 'Org',
       type: 'string',
@@ -17,6 +22,11 @@ export default {
       name: 'currentRole',
       title: 'CurrentRole',
       type: 'string',
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'text',
     },
     {
       name: 'journey',
@@ -41,7 +51,7 @@ export default {
             {
               name: 'description',
               title: 'Description',
-              type: 'string',
+              type: 'text',
             },
             {
               name: 'tenure',
