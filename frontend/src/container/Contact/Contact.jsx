@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { BsTwitter, BsLinkedin, BsInstagram, BsGithub } from "react-icons/bs";
+import { BsTelephoneOutbound } from "react-icons/bs";
+import { CgMail } from "react-icons/cg";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client";
-import { CgMail } from "react-icons/cg";
-import { BsTelephoneOutbound } from "react-icons/bs";
 
 import "./Contact.scss";
 
@@ -48,7 +49,7 @@ const Contact = () => {
   return (
     <>
       <h2 className="head-text">
-        My <span>Contact</span> <br />
+        Ways to <span>Reach Me</span> <br />
       </h2>
       <div className="app__footer-cards">
         <div className="app__footer-card">
@@ -61,6 +62,29 @@ const Contact = () => {
           <BsTelephoneOutbound />
           <a href="tel:+917394926646" className="p-text">
             +91 7394 926646
+          </a>
+        </div>
+        <div className="app__footer-card">
+          <a href="https://x.com/rgndunes" target="_blank" className="p-text">
+            <BsTwitter style={{ color: "dodgerblue" }} />
+          </a>
+        </div>
+        <div className="app__footer-card">
+          <a
+            href="https://www.instagram.com/rgndunes/"
+            target="_blank"
+            className="p-text"
+          >
+            <BsInstagram style={{ color: "rgb(226, 56, 124)" }} />
+          </a>
+        </div>
+        <div className="app__footer-card" style={{ color: "red" }}>
+          <a
+            href="https://www.linkedin.com/in/rgndunes/"
+            target="_blank"
+            className="p-text"
+          >
+            <BsLinkedin style={{ color: "rgb(50, 100, 189)" }} />
           </a>
         </div>
       </div>

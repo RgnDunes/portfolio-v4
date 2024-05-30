@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
+
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
+import { sortSanityDataByKey } from "../../utils";
 
 import "./Projects.scss";
 
@@ -18,9 +19,10 @@ const Projects = () => {
     const query = '*[_type == "projects"]';
 
     client.fetch(query).then((data) => {
-      setWorks(data);
-      setFilterWorks(data);
-      setFilters(setFiltersFromTags(data));
+      const sortedData = sortSanityDataByKey(data, "id", true);
+      setWorks(sortedData);
+      setFilterWorks(sortedData);
+      setFilters(setFiltersFromTags(sortedData));
     });
   }, []);
 
@@ -66,7 +68,7 @@ const Projects = () => {
   return (
     <>
       <h2 className="head-text">
-        My <span>Projects</span> <br />
+        My <span>Side Projects</span> <br />
         <div className="app__work-filter app__flex">
           {filters.map((item, idx) => (
             <div

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-
 import { HiMenuAlt4, HiX } from "react-icons/hi";
-
-import { images } from "../../constants";
 import { motion } from "framer-motion";
 
+import { images } from "../../constants";
 import { NAV_ITEMS } from "../constants";
+
 import "./Navbar.scss";
 
 const Navbar = () => {

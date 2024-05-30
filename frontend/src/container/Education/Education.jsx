@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
+import { sortSanityDataByKey } from "../../utils";
 
 import "./Education.scss";
 
@@ -13,14 +14,14 @@ const Education = () => {
     const query = '*[_type == "education"]';
 
     client.fetch(query).then((data) => {
-      setEducations(data);
+      setEducations(sortSanityDataByKey(data, "id", true));
     });
   }, []);
 
   return (
     <>
-      <h2 className="head-text">
-        My <span>Education</span> <br />
+      <h2 className="head-text" style={{ marginBottom: "35px" }}>
+        <span>Academic</span> Background <br />
       </h2>
       <div className="app__flex">
         <motion.div className="app__education-exp comments-list">

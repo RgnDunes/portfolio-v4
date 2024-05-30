@@ -72,7 +72,7 @@ const Hobbies = () => {
     <>
       <div className="app__flex" style={{ flexDirection: "column" }}>
         <h2 className="head-text">
-          My <span>Hobbies</span> <br />
+          When I'm <span>Not Working</span> <br />
           <div className="app__work-filter app__flex">
             {hobbyList.map((item, idx) => (
               <div
@@ -89,9 +89,9 @@ const Hobbies = () => {
         </h2>
         {!isLoading ? (
           <motion.div
-            whileInView={{ opacity: [0, 1], scale: [0, 1] }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
-            exit={{ opacity: [1, 0], scale: [1, 0] }}
+            whileInView={{ opacity: [0, 1], scale: [0.6, 1] }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            exit={{ opacity: [1, 0], scale: [1, 0.6] }}
             className="masonry-layout-content"
             style={{
               backgroundColor: "var(--white-color)",

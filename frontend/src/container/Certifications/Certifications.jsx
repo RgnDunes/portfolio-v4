@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 
-import "./Certifications.scss";
-
 const Certifications = () => {
   const [certificates, setCertificates] = useState([]);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -36,7 +34,7 @@ const Certifications = () => {
   return (
     <>
       <h2 className="head-text">
-        My <span>Certifications</span> <br />
+        My <span>Professional Credentials</span> <br />
       </h2>
       <div className="masonry-layout-content">
         {certificates?.map((certificate) => {

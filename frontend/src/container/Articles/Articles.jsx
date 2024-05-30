@@ -24,7 +24,7 @@ const Articles = () => {
   return (
     <>
       <h2 className="head-text">
-        My <span>Articles</span> <br />
+        <span>Contributions</span> to the <span>Tech Community</span> <br />
       </h2>
       <div
         className="app__work-filter app__flex"

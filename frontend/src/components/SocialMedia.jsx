@@ -1,21 +1,40 @@
 import React from "react";
-
 import { BsTwitter, BsLinkedin, BsInstagram, BsGithub } from "react-icons/bs";
 
 const SocialMedia = () => {
   return (
     <div className="app__social">
       <div>
-        <BsTwitter />
+        <a href="https://x.com/rgndunes" target="_blank" className="p-text">
+          <BsTwitter style={{ color: "dodgerblue" }} />
+        </a>
       </div>
       <div>
-        <BsInstagram />
+        <a
+          href="https://www.instagram.com/rgndunes/"
+          target="_blank"
+          className="p-text"
+        >
+          <BsInstagram style={{ color: "rgb(226, 56, 124)" }} />
+        </a>
       </div>
       <div>
-        <BsGithub />
+        <a
+          href="https://github.com/RgnDunes"
+          target="_blank"
+          className="p-text"
+        >
+          <BsGithub />
+        </a>
       </div>
       <div>
-        <BsLinkedin />
+        <a
+          href="https://www.linkedin.com/in/rgndunes/"
+          target="_blank"
+          className="p-text"
+        >
+          <BsLinkedin style={{ color: "rgb(50, 100, 189)" }} />
+        </a>
       </div>
     </div>
   );

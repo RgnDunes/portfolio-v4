@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
+import { sortSanityDataByKey } from "../../utils";
 
 import "./SkillsExperiences.scss";
 
@@ -15,7 +16,7 @@ const Skills = () => {
     const experiencesQuery = '*[_type == "experience"]';
 
     client.fetch(experiencesQuery).then((data) => {
-      setExperiences(data);
+      setExperiences(sortSanityDataByKey(data, "id", true));
     });
 
     client.fetch(skillsQuery).then((data) => {
@@ -26,7 +27,7 @@ const Skills = () => {
   return (
     <>
       <h2 className="head-text">
-        Skills <span>&</span> Experience
+        What I <span>Offer</span> and What I've <span>Done</span>
       </h2>
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -78,6 +79,18 @@ const Skills = () => {
                     <span style={{ color: "dodgerblue" }}>
                       {experience.totalTenure}
                     </span>
+                  </p>
+                  <br />
+                  <p className="p-text">
+                    <pre
+                      style={{
+                        whiteSpace: "pre-wrap",
+                        wordWrap: "break-word",
+                        overflowX: "auto",
+                      }}
+                    >
+                      {experience.description || ""}
+                    </pre>
                   </p>
                 </motion.div>
                 <div class="chain chain-bottom"></div>

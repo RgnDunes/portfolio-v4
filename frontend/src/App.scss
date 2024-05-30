@@ -134,6 +134,7 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
 
   padding: 1rem;
 
@@ -155,15 +156,12 @@
       width: 15px;
       height: 15px;
       color: var(--gray-color);
+      margin-top: 4px;
     }
 
     &:hover {
-      background-color: var(--secondary-color);
-      border-color: var(--secondary-color);
-
-      svg {
-        color: var(--white-color);
-      }
+      background-color: var(--light-grey-color);
+      border-color: var(--light-grey-color);
     }
 
     @media screen and (min-width: 2000px) {
@@ -238,18 +236,18 @@
 }
 
 .chain-top {
-  top: 0;
+  // top: 0;
 }
 
 .chain-bottom {
-  top: 50%;
+  // top: 50%;
 }
 
 .chain-content {
   border: 1px solid dodgerblue;
   border-radius: 8px;
   padding: 8px 16px;
-  margin: 3rem 0;
+  margin: 1.5rem 0;
 
   @media screen and (min-width: 2000px) {
     margin: 4rem 0;
@@ -262,6 +260,8 @@
 
 .chain-icon {
   z-index: 10;
+  background-color: white;
+  border-radius: 50%;
 }
 
 // Masonry Layout
