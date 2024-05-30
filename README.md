@@ -1,4 +1,13 @@
-## Screenshots of the Portfolio - v4
+## Video Recording of Portfolio - v4
+ - [Complete Recording](https://cdn.sanity.io/files/e1efnw2p/production/ff15dfdd2be0aa91002458edd4cb034ace1f53d1.mov)
+
+ - [Desktop View](https://cdn.sanity.io/files/e1efnw2p/production/c1e35f7195e0baecd1ec1f0a1b471d9ee62cfd0a.mov)
+
+ - [Mobile View (iPhone 14 Pro Max)](https://cdn.sanity.io/files/e1efnw2p/production/1b0ad389af78c3f6652fc638e15a2fe8add797b6.mov)
+
+ - [Tablet View (iPad Pro)](https://cdn.sanity.io/files/e1efnw2p/production/c24b92ffddca333973ba6249db250f67f95cc057.mov)
+
+## Screenshots of Portfolio - v4
 ### Desktop View
 <img width="1512" alt="Screenshot 2024-05-31 at 3 34 52 AM" src="https://github.com/RgnDunes/portfolio-v4/assets/61814592/42bc281c-cc62-4db8-b30c-d63c0176bb9f">
 <img width="1511" alt="Screenshot 2024-05-31 at 3 43 02 AM" src="https://github.com/RgnDunes/portfolio-v4/assets/61814592/c2f1052d-a432-4720-880d-f57257a419fe">
