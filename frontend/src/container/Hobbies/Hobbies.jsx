@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 
-import "./Hobbies.scss";
-
 const Hobbies = () => {
   const [hobbies, setHobbies] = useState([]);
   const [hobbyList, setHobbyList] = useState([]);
@@ -122,11 +120,6 @@ const Hobbies = () => {
         ) : (
           "Loading..."
         )}
-        <div className="app__work-filter app__flex">
-          <div className="app__work-filter-item app__flex p-text item-active">
-            and many more...
-          </div>
-        </div>
       </div>
     </>
   );
