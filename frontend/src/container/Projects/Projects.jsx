@@ -103,7 +103,7 @@ const Projects = () => {
                   <a
                     href={project.projectLinks.githubUrl}
                     target="_blank"
-                    rel="noreferr"
+                    rel="noreferrer"
                   >
                     <motion.div
                       whileInView={{ scale: [0, 1] }}
@@ -121,7 +121,7 @@ const Projects = () => {
                     <a
                       href={project.projectLinks.liveUrl}
                       target="_blank"
-                      rel="noreferr"
+                      rel="noreferrer"
                     >
                       <motion.div
                         whileInView={{ scale: [0, 1] }}

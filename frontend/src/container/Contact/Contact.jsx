@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BsTwitter, BsLinkedin, BsInstagram, BsGithub } from "react-icons/bs";
+import { BsTwitter, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { BsTelephoneOutbound } from "react-icons/bs";
 import { CgMail } from "react-icons/cg";
 
@@ -65,7 +65,12 @@ const Contact = () => {
           </a>
         </div>
         <div className="app__footer-card">
-          <a href="https://x.com/rgndunes" target="_blank" className="p-text">
+          <a
+            href="https://x.com/rgndunes"
+            target="_blank"
+            rel="noreferrer"
+            className="p-text"
+          >
             <BsTwitter style={{ color: "dodgerblue" }} />
           </a>
         </div>
@@ -73,6 +78,7 @@ const Contact = () => {
           <a
             href="https://www.instagram.com/rgndunes/"
             target="_blank"
+            rel="noreferrer"
             className="p-text"
           >
             <BsInstagram style={{ color: "rgb(226, 56, 124)" }} />
@@ -82,6 +88,7 @@ const Contact = () => {
           <a
             href="https://www.linkedin.com/in/rgndunes/"
             target="_blank"
+            rel="noreferrer"
             className="p-text"
           >
             <BsLinkedin style={{ color: "rgb(50, 100, 189)" }} />

@@ -47,7 +47,7 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.profile} alt="" profile-picture />
+        <img src={images.profile} alt="profile-picture" />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -69,7 +69,7 @@ const Header = () => {
           images.typescript,
         ].map((circle, idx) => (
           <div className="circle-cmp app__flex" key={`circle-${idx}`}>
-            <img src={circle} />
+            <img src={circle} alt="circle" />
           </div>
         ))}
       </motion.div>

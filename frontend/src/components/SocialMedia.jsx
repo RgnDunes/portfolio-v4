@@ -5,7 +5,12 @@ const SocialMedia = () => {
   return (
     <div className="app__social">
       <div>
-        <a href="https://x.com/rgndunes" target="_blank" className="p-text">
+        <a
+          href="https://x.com/rgndunes"
+          target="_blank"
+          rel="noreferrer"
+          className="p-text"
+        >
           <BsTwitter style={{ color: "dodgerblue" }} />
         </a>
       </div>
@@ -13,6 +18,7 @@ const SocialMedia = () => {
         <a
           href="https://www.instagram.com/rgndunes/"
           target="_blank"
+          rel="noreferrer"
           className="p-text"
         >
           <BsInstagram style={{ color: "rgb(226, 56, 124)" }} />
@@ -22,6 +28,7 @@ const SocialMedia = () => {
         <a
           href="https://github.com/RgnDunes"
           target="_blank"
+          rel="noreferrer"
           className="p-text"
         >
           <BsGithub />
@@ -31,6 +38,7 @@ const SocialMedia = () => {
         <a
           href="https://www.linkedin.com/in/rgndunes/"
           target="_blank"
+          rel="noreferrer"
           className="p-text"
         >
           <BsLinkedin style={{ color: "rgb(50, 100, 189)" }} />

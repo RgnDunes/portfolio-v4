@@ -45,7 +45,10 @@ const Articles = () => {
             className="app__article-item app__flex"
             style={{ margin: "2rem", maxWidth: "500px" }}
           >
-            <img src={urlFor(article.articleThumbnailImage)} />
+            <img
+              src={urlFor(article.articleThumbnailImage)}
+              alt="article-thumbnail"
+            />
 
             <div className="app__article-content">
               <h4 className="bold-text">{article.name}</h4>
@@ -63,10 +66,12 @@ const Articles = () => {
                   style={{
                     marginRight: "1rem",
                   }}
+                  alt="article-platform-image"
                 />
                 <a
                   href={article.articleLink}
                   target="_blank"
+                  rel="noreferrer"
                   className="p-text"
                 >
                   <h4 className="p-text">Read.</h4>

@@ -46,7 +46,11 @@ const Certifications = () => {
               transition={{ duration: 0.25, ease: "easeIn" }}
               class="masonry-layout-image"
             >
-              <img key={certificate.image} src={urlFor(certificate.image)} />
+              <img
+                key={certificate.image}
+                src={urlFor(certificate.image)}
+                alt="certificate-image"
+              />
             </motion.div>
           );
         })}

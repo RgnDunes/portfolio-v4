@@ -33,7 +33,11 @@ const About = () => {
             className="app__profile-item"
             key={about.title + idx}
           >
-            <img src={urlFor(about.image)} style={{ marginLeft: 20 }} />
+            <img
+              src={urlFor(about.image)}
+              style={{ marginLeft: 20 }}
+              alt="admin-image"
+            />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>

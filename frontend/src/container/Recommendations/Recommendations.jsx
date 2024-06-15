@@ -40,6 +40,7 @@ const Recommendations = () => {
             <img
               src={urlFor(currentTestimonial.imageUrl)}
               style={{ marginBottom: "20px" }}
+              alt="testimonial-image"
             />
 
             <div className="app__testimonial-content">
