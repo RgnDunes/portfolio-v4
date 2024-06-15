@@ -7,6 +7,7 @@ import typescript from "../assets/typescript.png";
 import profile from "../assets/profile.png";
 import circle from "../assets/circle.svg";
 import logo from "../assets/logo.png";
+import loadingGif from "../assets/loading-gif.gif";
 
 const images = {
   javascript,
@@ -17,6 +18,7 @@ const images = {
   profile,
   circle,
   logo,
+  loadingGif,
 };
 
 export default images;

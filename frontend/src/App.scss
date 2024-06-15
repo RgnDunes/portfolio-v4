@@ -3,6 +3,22 @@
   font-family: var(--font-base);
 }
 
+.loading-gif {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+
+  img {
+    border-radius: 100%;
+
+    @media screen and (max-width: 600px) {
+      object-fit: contain;
+      width: 15rem;
+    }
+  }
+}
+
 .app__whitebg {
   background-color: var(--white-color);
 }
