@@ -36,7 +36,7 @@ const About = () => {
             <img
               src={urlFor(about.image)}
               style={{ marginLeft: 20 }}
-              alt="admin-image"
+              alt="admin"
             />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}

@@ -49,7 +49,7 @@ const Certifications = () => {
               <img
                 key={certificate.image}
                 src={urlFor(certificate.image)}
-                alt="certificate-image"
+                alt="certificate"
               />
             </motion.div>
           );

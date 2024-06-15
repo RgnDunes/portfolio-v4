@@ -66,7 +66,7 @@ const Articles = () => {
                   style={{
                     marginRight: "1rem",
                   }}
-                  alt="article-platform-image"
+                  alt="article-platform"
                 />
                 <a
                   href={article.articleLink}
