@@ -128,5 +128,5 @@ const Hobbies = () => {
 export default AppWrap(
   MotionWrap(Hobbies, "app__hobbies"),
   "hobbies",
-  "app__whitebg"
+  "app__primarybg"
 );

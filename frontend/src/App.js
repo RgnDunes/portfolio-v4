@@ -29,7 +29,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="app">
+    <div className="app light-theme">
       {isLoading ? (
         <AnimatePresence>
           <motion.div
