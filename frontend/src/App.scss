@@ -222,6 +222,13 @@
   }
 }
 
+.app__theme-toggle-container {
+  z-index: 200;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
 @media screen and (max-width: 500px) {
   .app__navigation,
   .app__social {

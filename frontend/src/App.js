@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { Navbar } from "./components";
+import { Navbar, ThemeToggle } from "./components";
 import {
   About,
   Articles,
@@ -21,6 +21,11 @@ import "./App.scss";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isLightMode, setIsLightMode] = useState(true);
+
+  window.addEventListener("storage", () => {
+    setIsLightMode(localStorage.getItem("isLightThemeActive") === "true");
+  });
 
   useEffect(() => {
     setTimeout(() => {
@@ -29,7 +34,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="app light-theme">
+    <div className={`app ${isLightMode ? "light-theme" : "dark-theme"}`}>
       {isLoading ? (
         <AnimatePresence>
           <motion.div
@@ -47,6 +52,7 @@ const App = () => {
         </AnimatePresence>
       ) : (
         <>
+          <ThemeToggle />
           <Navbar />
           <Header />
           <About />

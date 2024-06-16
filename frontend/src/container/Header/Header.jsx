@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import { images } from "../../constants";
@@ -18,8 +18,19 @@ const scaleVariants = {
 };
 
 const Header = () => {
+  const [isLightMode, setIsLightMode] = useState(true);
+
+  window.addEventListener("storage", () => {
+    setIsLightMode(localStorage.getItem("isLightThemeActive") === "true");
+  });
+
   return (
-    <div id="home" className="app__header app__flex home-light-bg">
+    <div
+      id="home"
+      className={`app__header app__flex ${
+        isLightMode ? "home-light-bg" : "home-dark-bg"
+      }`}
+    >
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}

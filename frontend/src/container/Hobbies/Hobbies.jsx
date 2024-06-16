@@ -92,7 +92,7 @@ const Hobbies = () => {
             exit={{ opacity: [1, 0], scale: [1, 0.6] }}
             className="masonry-layout-content"
             style={{
-              backgroundColor: "var(--white-color)",
+              backgroundColor: "var(--light-grey-color)",
               borderRadius: "7px",
             }}
           >
