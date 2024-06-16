@@ -92,7 +92,7 @@ const Hobbies = () => {
             exit={{ opacity: [1, 0], scale: [1, 0.6] }}
             className="masonry-layout-content"
             style={{
-              backgroundColor: "var(--white-color)",
+              backgroundColor: "var(--light-grey-color)",
               borderRadius: "7px",
             }}
           >
@@ -128,5 +128,5 @@ const Hobbies = () => {
 export default AppWrap(
   MotionWrap(Hobbies, "app__hobbies"),
   "hobbies",
-  "app__whitebg"
+  "app__primarybg"
 );

@@ -6,11 +6,11 @@
   align-items: center;
 
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.25);
+  background: var(--white-alpha-25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--white-alpha-18);
   position: fixed;
   z-index: 100;
 }
@@ -54,7 +54,7 @@
     }
 
     a {
-      color: var(--gray-color);
+      color: var(--dark-black-color);
       text-decoration: none;
       flex-direction: column;
 

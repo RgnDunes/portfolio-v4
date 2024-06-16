@@ -2,8 +2,43 @@
 
 :root {
   --font-base: "DM Sans", sans-serif;
+}
 
+.dark-theme {
+  /* DARK MODE */
+  --secondary-color: #7e5aff;
+  --dark-black-color: #000000;
+  --black-color: #121212;
+  --lightGray-color: #2c2c2c;
+  --gray-color: #4a4a4a;
+  --brown-color: #3e3e4a;
+  --white-color: #ffffff;
+  --primary-color: #1c1b29;
+  --pink-color: #7b5ea5;
+  --light-blue-color: #4a3e7c;
+  --soft-green-color: #504c6b;
+  --light-grey-color: #2e2c39;
+  --beige-color: #3d334d;
+  --light-yellow-color: #6b5e7b;
+  --lavender-color: #a67db8;
+  --dodgerblue: #5a4fa7;
+  --navigation-dot: #6e6e6e;
+  --white-alpha-25: rgba(255, 255, 255, 0.25);
+  --white-alpha-18: rgba(255, 255, 255, 0.18);
+  --black-alpha-10: rgba(0, 0, 0, 0.1);
+  --accent-blue: #4b3b8e;
+  --black-alpha-20: rgba(0, 0, 0, 0.2);
+  --black-alpha-50: rgba(0, 0, 0, 0.5);
+  --desc-text: #cccccc;
+  --title-text: #eaeaea;
+  --section-titles: #f1f1f1;
+  --soft-orange-color: #6e5773;
+}
+
+.light-theme {
+  /* LIGHT MODE */
   --secondary-color: #313bac;
+  --dark-black-color: #000;
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
   --gray-color: #6b7688;
@@ -17,6 +52,17 @@
   --beige-color: #f5f0e6;
   --light-yellow-color: #faf9e1;
   --lavender-color: #e7e3f3;
+  --dodgerblue: #1e90ff;
+  --navigation-dot: #cbcbcb;
+  --white-alpha-25: #ffffff40;
+  --white-alpha-18: #ffffff2e;
+  --black-alpha-10: #0000001a;
+  --accent-blue: #2430af;
+  --black-alpha-20: #00000033;
+  --black-alpha-50: #00000080;
+  --desc-text: #333333;
+  --title-text: #1a1a1a;
+  --section-titles: #212121;
   --soft-orange-color: #f9e6d1;
 }
 

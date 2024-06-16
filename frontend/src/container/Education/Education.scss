@@ -56,7 +56,7 @@
     }
 
     &:hover {
-      box-shadow: 0 0 25px dodgerblue;
+      box-shadow: 0 0 25px var(--dodgerblue);
       transition: box-shadow 0.5s;
     }
 

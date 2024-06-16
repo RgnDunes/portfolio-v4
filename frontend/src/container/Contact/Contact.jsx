@@ -84,7 +84,7 @@ const Contact = () => {
             <BsInstagram style={{ color: "rgb(226, 56, 124)" }} />
           </a>
         </div>
-        <div className="app__footer-card" style={{ color: "red" }}>
+        <div className="app__footer-card">
           <a
             href="https://www.linkedin.com/in/rgndunes/"
             target="_blank"
