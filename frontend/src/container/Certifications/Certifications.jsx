@@ -62,5 +62,5 @@ const Certifications = () => {
 export default AppWrap(
   MotionWrap(Certifications, "app__testimonial"),
   "certifications",
-  "app__lightgreybg"
+  "app__lighttheme"
 );

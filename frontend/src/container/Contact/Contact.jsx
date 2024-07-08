@@ -143,5 +143,5 @@ const Contact = () => {
 export default AppWrap(
   MotionWrap(Contact, "app__footer"),
   "contact",
-  "app__lightbluebg"
+  "app__lighttheme"
 );

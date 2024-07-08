@@ -6,7 +6,7 @@ export const NAV_ITEMS = [
   "education",
   "articles",
   "recommendations",
-  "certifications",
-  "hobbies",
+  // "certifications",
+  // "hobbies",
   "contact",
 ];

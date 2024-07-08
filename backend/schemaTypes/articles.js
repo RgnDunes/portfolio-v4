@@ -20,6 +20,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+    },
+    {
       name: 'platformImage',
       title: 'PlatformImg',
       type: 'image',

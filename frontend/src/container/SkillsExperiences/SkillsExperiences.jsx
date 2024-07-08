@@ -81,17 +81,22 @@ const Skills = () => {
                     </span>
                   </p>
                   <br />
-                  <p className="p-text">
-                    <pre
-                      style={{
-                        whiteSpace: "pre-wrap",
-                        wordWrap: "break-word",
-                        overflowX: "auto",
-                      }}
-                    >
-                      {experience.description || ""}
-                    </pre>
-                  </p>
+                  {experience.description ? (
+                    <details>
+                      <summary>About</summary>
+                      <p className="p-text">
+                        <pre
+                          style={{
+                            whiteSpace: "pre-wrap",
+                            wordWrap: "break-word",
+                            overflowX: "auto",
+                          }}
+                        >
+                          {experience.description || ""}
+                        </pre>
+                      </p>
+                    </details>
+                  ) : null}
                 </motion.div>
                 <div class="chain chain-bottom"></div>
               </div>
@@ -106,5 +111,5 @@ const Skills = () => {
 export default AppWrap(
   MotionWrap(Skills, "app__skills"),
   "experiences",
-  "app__lightbluebg"
+  "app__lighttheme"
 );

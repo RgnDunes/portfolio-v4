@@ -73,5 +73,5 @@ const Education = () => {
 export default AppWrap(
   MotionWrap(Education, "app__education"),
   "education",
-  "app__lightgreybg"
+  "app__lighttheme"
 );
