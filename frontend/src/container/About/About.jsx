@@ -20,8 +20,8 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        Empowering <span>Innovation</span> <br />
-        Through <span>Code, Teaching, and Guidance.</span>
+        <span>Empowering</span> Innovation <br />
+        <span>Through</span> Code, Teaching, and Guidance.
       </h2>
 
       <div className="app__profiles">
@@ -30,18 +30,14 @@ const About = () => {
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: "tween" }}
-            className="app__profile-item"
+            className="app__profile-item box-style"
             key={about.title + idx}
           >
-            <img
-              src={urlFor(about.image)}
-              style={{ marginLeft: 20 }}
-              alt="admin"
-            />
-            <h2 className="bold-text" style={{ marginTop: 20 }}>
+            <img src={urlFor(about.image)} alt="admin" />
+            <h2 className="padding" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
-            <p className="p-text" style={{ marginTop: 10 }}>
+            <p className="p-text padding" style={{ marginTop: 10 }}>
               {about.description}
             </p>
           </motion.div>
@@ -54,5 +50,5 @@ const About = () => {
 export default AppWrap(
   MotionWrap(About, "app__about"),
   "about",
-  "app__lightgreybg"
+  "app__background"
 );

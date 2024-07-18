@@ -52,7 +52,7 @@ const App = () => {
         </AnimatePresence>
       ) : (
         <>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <Navbar />
           <Header />
           <About />
@@ -61,8 +61,8 @@ const App = () => {
           <Education />
           <Articles />
           <Recommendations />
-          <Certifications />
-          <Hobbies />
+          {/* <Certifications /> */}
+          {/* <Hobbies /> */}
           <Contact />
         </>
       )}

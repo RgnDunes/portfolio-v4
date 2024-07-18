@@ -70,7 +70,7 @@ const Hobbies = () => {
     <>
       <div className="app__flex" style={{ flexDirection: "column" }}>
         <h2 className="head-text">
-          When I'm <span>Not Working</span> <br />
+          <span>When I'm</span> Not Working <br />
           <div className="app__work-filter app__flex">
             {hobbyList.map((item, idx) => (
               <div
@@ -128,5 +128,5 @@ const Hobbies = () => {
 export default AppWrap(
   MotionWrap(Hobbies, "app__hobbies"),
   "hobbies",
-  "app__primarybg"
+  "app__background"
 );

@@ -5,19 +5,15 @@
 }
 
 .app__article-item {
-  width: 60%;
-  background-color: var(--primary-color);
+  width: calc(100% - 20px);
   display: flex;
   flex-direction: row;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0px 0px 30px var(----black-alpha-10);
-
+  border-bottom: 2px dotted dodgerblue;
   transition: all 0.3s ease-in-out;
+  padding-bottom: 15px;
 
   img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
     border-radius: 9px;
   }
 
@@ -25,8 +21,7 @@
     min-height: 450px;
 
     img {
-      width: 150px;
-      height: 150px;
+      width: 200px;
     }
   }
 
@@ -41,6 +36,28 @@
       width: 100%;
       height: 80px;
       object-fit: cover;
+    }
+  }
+
+  .app__flex {
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+
+      @media screen and (min-width: 2000px) {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      h4 {
+        text-decoration: none;
+        font-weight: 500;
+        color: dodgerblue;
+      }
     }
   }
 }
@@ -83,22 +100,5 @@
   @media screen and (max-width: 600px) {
     margin-top: 2rem;
     padding: 0;
-  }
-
-  img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: contain;
-
-    @media screen and (min-width: 2000px) {
-      width: 90px;
-      height: 90px;
-    }
-  }
-
-  a {
-    text-decoration: none;
-    font-weight: 500;
   }
 }

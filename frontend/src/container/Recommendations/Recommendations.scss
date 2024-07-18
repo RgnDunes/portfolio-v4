@@ -75,6 +75,11 @@
     margin-top: 5px;
   }
 
+  svg {
+    color: dodgerblue;
+    font-size: 1.5rem;
+  }
+
   @media screen and (max-width: 600px) {
     margin-top: 2rem;
     padding: 0;
@@ -89,7 +94,9 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--primary-color);
+    background-color: #1a001f;
+    border: 2px solid #800080;
+    box-shadow: 0 0 5px #800080;
 
     margin: 1rem;
     transition: all 0.3s ease-in-out;
@@ -97,15 +104,12 @@
     svg {
       width: 20px;
       height: 20px;
-      color: var(--secondary-color);
+
+      color: var(--white-color);
     }
 
     &:hover {
-      background-color: var(--secondary-color);
-
-      svg {
-        color: var(--white-color);
-      }
+      border-radius: 18px;
     }
 
     @media screen and (min-width: 2000px) {

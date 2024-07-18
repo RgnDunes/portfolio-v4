@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import { FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
@@ -27,6 +28,10 @@ const Recommendations = () => {
 
   return (
     <>
+      <h2 className="head-text" style={{ margin: "0 0 60px" }}>
+        <span>What I</span> Offer <span>and What I've</span> Done
+      </h2>
+
       {recommendations.length && (
         <>
           <motion.div
@@ -34,7 +39,7 @@ const Recommendations = () => {
             whileInView={{ opacity: [0, 1], scale: [0, 1] }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             exit={{ opacity: [1, 0], scale: [1, 0] }}
-            className="app__testimonial-item app__flex"
+            className="app__testimonial-item app__flex box-style"
             style={{ flexDirection: "column" }}
           >
             <img
@@ -42,15 +47,26 @@ const Recommendations = () => {
               style={{ marginBottom: "20px" }}
               alt="testimonial"
             />
-
             <div className="app__testimonial-content">
               <p className="p-text">{`${currentTestimonial.message.substr(
                 0,
                 400
               )}${currentTestimonial.message.length > 400 ? "..." : ""}`}</p>
-              <div>
-                <h4 className="bold-text">{currentTestimonial.name}</h4>
-                <h5 className="p-text">{currentTestimonial.designation}</h5>
+              <div
+                className="app__flex"
+                style={{
+                  width: "100%",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <div>
+                  <h4 className="bold-text">{currentTestimonial.name}</h4>
+                  <h5 className="p-text">{currentTestimonial.designation}</h5>
+                </div>
+                <div>
+                  <FaLinkedin />
+                </div>
               </div>
             </div>
           </motion.div>
@@ -89,5 +105,5 @@ const Recommendations = () => {
 export default AppWrap(
   MotionWrap(Recommendations, "app__testimonial"),
   "recommendations",
-  "app__primarybg"
+  "app__background"
 );

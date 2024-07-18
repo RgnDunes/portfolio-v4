@@ -27,7 +27,7 @@ const Skills = () => {
   return (
     <>
       <h2 className="head-text">
-        What I <span>Offer</span> and What I've <span>Done</span>
+        <span>What I</span> Offer <span>and What I've</span> Done
       </h2>
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -68,7 +68,7 @@ const Skills = () => {
                 <motion.div
                   whileInView={{ opacity: [0, 1] }}
                   transition={{ duration: 0.5 }}
-                  className="app__skills-exp-work chain-content"
+                  className="app__skills-exp-work chain-content box-style"
                   data-tip
                   data-fo={experience.org}
                   key={experience.org}
@@ -81,17 +81,22 @@ const Skills = () => {
                     </span>
                   </p>
                   <br />
-                  <p className="p-text">
-                    <pre
-                      style={{
-                        whiteSpace: "pre-wrap",
-                        wordWrap: "break-word",
-                        overflowX: "auto",
-                      }}
-                    >
-                      {experience.description || ""}
-                    </pre>
-                  </p>
+                  {experience.description ? (
+                    <details>
+                      <summary>About</summary>
+                      <p className="p-text">
+                        <pre
+                          style={{
+                            whiteSpace: "pre-wrap",
+                            wordWrap: "break-word",
+                            overflowX: "auto",
+                          }}
+                        >
+                          {experience.description || ""}
+                        </pre>
+                      </p>
+                    </details>
+                  ) : null}
                 </motion.div>
                 <div class="chain chain-bottom"></div>
               </div>
@@ -106,5 +111,5 @@ const Skills = () => {
 export default AppWrap(
   MotionWrap(Skills, "app__skills"),
   "experiences",
-  "app__lightbluebg"
+  "app__background"
 );

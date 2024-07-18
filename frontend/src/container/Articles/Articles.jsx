@@ -23,44 +23,29 @@ const Articles = () => {
 
   return (
     <>
-      <h2 className="head-text">
-        <span>Contributions</span> to the <span>Tech Community</span> <br />
+      <h2 className="head-text" style={{ marginBottom: "60px" }}>
+        Contributions <span>to the</span> Tech Community <br />
       </h2>
-      <div
-        className="app__work-filter app__flex"
-        onClick={handleFilteredArticles}
-      >
-        <div className="app__work-filter-item app__flex p-text item-active">
-          {showAll ? "See less" : `See all ${allArticles.length} articles.`}
-        </div>
-      </div>
-      <div className="app__flex" style={{ flexWrap: "wrap" }}>
-        {(showAll
-          ? allArticles
-          : allArticles.length > 6
-          ? allArticles.slice(0, 6)
-          : allArticles
-        ).map((article) => (
-          <div
-            className="app__article-item app__flex"
-            style={{ margin: "2rem", maxWidth: "500px" }}
-          >
-            <img
-              src={urlFor(article.articleThumbnailImage)}
-              alt="article-thumbnail"
-            />
 
-            <div className="app__article-content">
-              <h4 className="bold-text">{article.name}</h4>
-              <div>
-                <h5 className="p-text">{article.designation}</h5>
+      <div style={{ width: "100%" }} className="box-style padding">
+        {(allArticles.length > 4 ? allArticles.slice(0, 4) : allArticles).map(
+          (article) => (
+            <div
+              className="app__article-item app__flex "
+              style={{ margin: "2rem" }}
+            >
+              <img
+                src={urlFor(article.articleThumbnailImage)}
+                alt="article-thumbnail"
+              />
+
+              <div className="app__article-content">
+                <h4 className="bold-text">{article.name}</h4>
+                <div>
+                  <h5 className="p-text">{article.description}</h5>
+                </div>
               </div>
-              <div
-                className="app__flex"
-                style={{
-                  alignItems: "end",
-                }}
-              >
+              <div className="app__flex">
                 <img
                   src={urlFor(article.platformImage)}
                   style={{
@@ -78,8 +63,50 @@ const Articles = () => {
                 </a>
               </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
+        {allArticles.length > 4 ? (
+          <details>
+            <summary>View remaining {allArticles.length - 4} articles</summary>
+            {(allArticles.length > 4 ? allArticles.slice(4) : []).map(
+              (article) => (
+                <div
+                  className="app__article-item app__flex "
+                  style={{ margin: "2rem" }}
+                >
+                  <img
+                    src={urlFor(article.articleThumbnailImage)}
+                    alt="article-thumbnail"
+                  />
+
+                  <div className="app__article-content">
+                    <h4 className="bold-text">{article.name}</h4>
+                    <div>
+                      <h5 className="p-text">{article.description}</h5>
+                    </div>
+                  </div>
+                  <div className="app__flex">
+                    <img
+                      src={urlFor(article.platformImage)}
+                      style={{
+                        marginRight: "1rem",
+                      }}
+                      alt="article-platform"
+                    />
+                    <a
+                      href={article.articleLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="p-text"
+                    >
+                      <h4 className="p-text">Read.</h4>
+                    </a>
+                  </div>
+                </div>
+              )
+            )}
+          </details>
+        ) : null}
       </div>
     </>
   );
@@ -88,5 +115,5 @@ const Articles = () => {
 export default AppWrap(
   MotionWrap(Articles, "app__articles"),
   "articles",
-  "app__lightbluebg"
+  "app__background"
 );

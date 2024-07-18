@@ -68,7 +68,7 @@ const Projects = () => {
   return (
     <>
       <h2 className="head-text">
-        My <span>Side Projects</span> <br />
+        <span>My</span> Side Projects <br />
         <div className="app__work-filter app__flex">
           {filters.map((item, idx) => (
             <div
@@ -88,20 +88,59 @@ const Projects = () => {
           className="app__work-portfolio"
         >
           {filterWorks.map((project, idx) => (
-            <div className="app__work-item app__flex" key={idx}>
+            <div className="app__work-item app__flex box-style" key={idx}>
               <div className="app__work-img app__flex">
                 <img src={urlFor(project.image)} alt={project.name} />
-                <motion.div
-                  whileHover={{ opacity: [0, 1] }}
-                  transition={{
-                    duration: 0.25,
-                    staggerChildren: 0.5,
-                    ease: "easeInOut",
-                  }}
-                  className="app__work-hover app__flex"
+              </div>
+              <div className="app__work-content app__flex">
+                <h4 className="bold-text">{project.name}</h4>
+                <p className="p-text" style={{ marginTop: 10 }}>
+                  {project.description}
+                </p>
+                <div className="app__flex" style={{ flexWrap: "wrap" }}>
+                  {project.tags.map((tag, idx) => (
+                    <p
+                      className="p-text app__work-tag"
+                      key={idx}
+                      style={{
+                        color: "#D3D3D3",
+                        backgroundColor: "#483D8B",
+                      }}
+                    >
+                      {tag.tag} &nbsp;
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              <motion.div
+                transition={{
+                  duration: 0.25,
+                  staggerChildren: 0.5,
+                  ease: "easeInOut",
+                }}
+                className="app__work-hover app__flex"
+              >
+                <a
+                  href={project.projectLinks.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
                 >
+                  <motion.div
+                    whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 0.9] }}
+                    transition={{
+                      duration: 0.25,
+                    }}
+                    className="app__flex"
+                  >
+                    <AiFillGithub />
+                  </motion.div>
+                </a>
+
+                {project.projectLinks.liveUrl ? (
                   <a
-                    href={project.projectLinks.githubUrl}
+                    href={project.projectLinks.liveUrl}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -113,46 +152,11 @@ const Projects = () => {
                       }}
                       className="app__flex"
                     >
-                      <AiFillGithub />
+                      <AiFillEye />
                     </motion.div>
                   </a>
-
-                  {project.projectLinks.liveUrl ? (
-                    <a
-                      href={project.projectLinks.liveUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <motion.div
-                        whileInView={{ scale: [0, 1] }}
-                        whileHover={{ scale: [1, 0.9] }}
-                        transition={{
-                          duration: 0.25,
-                        }}
-                        className="app__flex"
-                      >
-                        <AiFillEye />
-                      </motion.div>
-                    </a>
-                  ) : null}
-                </motion.div>
-              </div>
-              <div className="app__work-content app__flex">
-                <h4 className="bold-text">{project.name}</h4>
-                <p className="p-text" style={{ marginTop: 10 }}>
-                  {project.description}
-                </p>
-                <div
-                  className="app__work-tag app__flex"
-                  style={{ flexWrap: "wrap" }}
-                >
-                  {project.tags.map((tag, idx) => (
-                    <p className="p-text" key={idx}>
-                      {tag.tag} &nbsp;
-                    </p>
-                  ))}
-                </div>
-              </div>
+                ) : null}
+              </motion.div>
             </div>
           ))}
         </motion.div>
@@ -164,5 +168,5 @@ const Projects = () => {
 export default AppWrap(
   MotionWrap(Projects, "app__works"),
   "projects",
-  "app__primarybg"
+  "app__background"
 );

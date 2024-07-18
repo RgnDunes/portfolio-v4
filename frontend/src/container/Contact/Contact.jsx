@@ -49,7 +49,7 @@ const Contact = () => {
   return (
     <>
       <h2 className="head-text">
-        Ways to <span>Reach Me</span> <br />
+        <span>Ways to</span> Reach Me <br />
       </h2>
       <div className="app__footer-cards">
         <div className="app__footer-card">
@@ -96,7 +96,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {!isFormSubmitted ? (
+      {/* {!isFormSubmitted ? (
         <div className="app__footer-form app__flex">
           <div className="app__flex">
             <input
@@ -135,7 +135,7 @@ const Contact = () => {
         <div>
           <h3 className="head-text">Thanks</h3>
         </div>
-      )}
+      )} */}
     </>
   );
 };
@@ -143,5 +143,5 @@ const Contact = () => {
 export default AppWrap(
   MotionWrap(Contact, "app__footer"),
   "contact",
-  "app__lightbluebg"
+  "app__background"
 );

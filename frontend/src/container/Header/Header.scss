@@ -1,8 +1,7 @@
 #home {
   position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: repeat;
+
+  background-color: black;
 
   .app__wrapper {
     padding: 0;
@@ -11,13 +10,6 @@
       display: none;
     }
   }
-}
-
-.home-light-bg {
-  background: url("../../assets/light_bgIMG.png");
-}
-.home-dark-bg {
-  background: url("../../assets/dark_bgIMG.png");
 }
 
 .app__header {
@@ -67,12 +59,12 @@
   .badge-cmp,
   .tag-cmp {
     padding: 1rem 2rem;
-    background: var(--light-grey-color);
     border-radius: 15px;
     flex-direction: row;
     width: auto;
-
-    box-shadow: 0px 0px 20px var(--black-alpha-10);
+    background-color: #1a001f;
+    border: 2px solid #800080;
+    box-shadow: 0 0 5px #800080;
   }
 
   .tag-cmp {

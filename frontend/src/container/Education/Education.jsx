@@ -21,7 +21,7 @@ const Education = () => {
   return (
     <>
       <h2 className="head-text" style={{ marginBottom: "35px" }}>
-        <span>Academic</span> Background <br />
+        Academic <span>Background</span> <br />
       </h2>
       <div className="app__flex">
         <motion.div className="app__education-exp comments-list">
@@ -44,7 +44,7 @@ const Education = () => {
                 <motion.div
                   whileInView={{ opacity: [0, 1] }}
                   transition={{ duration: 0.5 }}
-                  className="app__education-exp-work chain-content"
+                  className="app__education-exp-work chain-content box-style"
                   data-tip
                   data-fo={education.name}
                   key={education.name}
@@ -73,5 +73,5 @@ const Education = () => {
 export default AppWrap(
   MotionWrap(Education, "app__education"),
   "education",
-  "app__lightgreybg"
+  "app__background"
 );

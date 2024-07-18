@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { PiDownloadSimpleLight } from "react-icons/pi";
 
 import { images } from "../../constants";
 import { AppWrap } from "../../wrapper";
@@ -23,6 +24,17 @@ const Header = () => {
   window.addEventListener("storage", () => {
     setIsLightMode(localStorage.getItem("isLightThemeActive") === "true");
   });
+
+  const handleDownload = () => {
+    const pdfUrl = "./resume.pdf";
+
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.setAttribute("download", "Divyansh Singh__2022 Grad__Resume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div
@@ -49,6 +61,15 @@ const Header = () => {
             <p className="p-text">Technical Content Writer</p>
             <p className="p-text">Instructor</p>
             <p className="p-text">Mentor</p>
+          </div>
+
+          <div
+            className="badge-cmp app__flex click"
+            onClick={handleDownload}
+            style={{ color: "dodgerblue", fontWeight: "800" }}
+          >
+            Resume &nbsp;&nbsp;
+            <PiDownloadSimpleLight />
           </div>
         </div>
       </motion.div>

@@ -13,7 +13,8 @@
 }
 
 .app__profile-item {
-  width: 190px;
+  width: max-content;
+  max-width: 440px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -21,10 +22,14 @@
   margin: 2rem;
 
   img {
-    width: 100%;
+    width: 105%;
     height: 170px;
     border-radius: 15px;
     object-fit: cover;
+  }
+
+  h2 {
+    color: #ffeb3b;
   }
 
   @media screen and (min-width: 2000px) {
@@ -34,5 +39,10 @@
     img {
       height: 320px;
     }
+  }
+
+  @media screen and (max-width: 850px) {
+    width: calc(100% - 20px);
+    margin: 2rem;
   }
 }
