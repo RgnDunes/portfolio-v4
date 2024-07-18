@@ -5,7 +5,7 @@
 }
 
 .app__article-item {
-  width: 100%;
+  width: calc(100% - 20px);
   display: flex;
   flex-direction: row;
   border-bottom: 2px dotted dodgerblue;

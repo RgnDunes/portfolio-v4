@@ -6,7 +6,7 @@
   align-items: center;
 
   padding: 1rem 2rem;
-  background: var(--white-alpha-25);
+  background: #1a001f;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
@@ -54,7 +54,7 @@
     }
 
     a {
-      color: var(--dark-black-color);
+      color: #800080;
       text-decoration: none;
       flex-direction: column;
 
@@ -63,13 +63,13 @@
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        color: var(--secondary-color);
+        color: white;
       }
     }
 
     &:hover {
       div {
-        background: var(--secondary-color);
+        background: white;
       }
     }
   }

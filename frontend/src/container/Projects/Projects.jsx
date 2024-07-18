@@ -68,7 +68,7 @@ const Projects = () => {
   return (
     <>
       <h2 className="head-text">
-        My <span>Side Projects</span> <br />
+        <span>My</span> Side Projects <br />
         <div className="app__work-filter app__flex">
           {filters.map((item, idx) => (
             <div
@@ -99,7 +99,14 @@ const Projects = () => {
                 </p>
                 <div className="app__flex" style={{ flexWrap: "wrap" }}>
                   {project.tags.map((tag, idx) => (
-                    <p className="p-text app__work-tag" key={idx}>
+                    <p
+                      className="p-text app__work-tag"
+                      key={idx}
+                      style={{
+                        color: "#D3D3D3",
+                        backgroundColor: "#483D8B",
+                      }}
+                    >
                       {tag.tag} &nbsp;
                     </p>
                   ))}
@@ -161,5 +168,5 @@ const Projects = () => {
 export default AppWrap(
   MotionWrap(Projects, "app__works"),
   "projects",
-  "app__lighttheme"
+  "app__background"
 );

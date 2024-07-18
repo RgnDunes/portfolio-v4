@@ -52,7 +52,7 @@ const App = () => {
         </AnimatePresence>
       ) : (
         <>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <Navbar />
           <Header />
           <About />

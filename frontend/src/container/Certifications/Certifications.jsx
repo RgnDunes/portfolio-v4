@@ -34,7 +34,7 @@ const Certifications = () => {
   return (
     <>
       <h2 className="head-text">
-        My <span>Professional Credentials</span> <br />
+        <span>My</span> Professional Credentials <br />
       </h2>
       <div className="masonry-layout-content">
         {certificates?.map((certificate) => {
@@ -62,5 +62,5 @@ const Certifications = () => {
 export default AppWrap(
   MotionWrap(Certifications, "app__testimonial"),
   "certifications",
-  "app__lighttheme"
+  "app__background"
 );

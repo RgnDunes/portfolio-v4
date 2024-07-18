@@ -24,7 +24,7 @@ const Articles = () => {
   return (
     <>
       <h2 className="head-text" style={{ marginBottom: "60px" }}>
-        <span>Contributions</span> to the <span>Tech Community</span> <br />
+        Contributions <span>to the</span> Tech Community <br />
       </h2>
 
       <div style={{ width: "100%" }} className="box-style padding">
@@ -115,5 +115,5 @@ const Articles = () => {
 export default AppWrap(
   MotionWrap(Articles, "app__articles"),
   "articles",
-  "app__lighttheme"
+  "app__background"
 );
