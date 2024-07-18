@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import NumberTickerDemo from "./NumberTickerDemo";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
@@ -23,6 +24,7 @@ const About = () => {
         Empowering <span>Innovation</span> <br />
         Through <span>Code, Teaching, and Guidance.</span>
       </h2>
+      <NumberTickerDemo />
 
       <div className="app__profiles">
         {abouts.map((about, idx) => (

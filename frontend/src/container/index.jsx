@@ -8,3 +8,4 @@ export { default as Hobbies } from "./Hobbies/Hobbies";
 export { default as Projects } from "./Projects/Projects";
 export { default as Recommendations } from "./Recommendations/Recommendations";
 export { default as SkillsExperiences } from "./SkillsExperiences/SkillsExperiences";
+export { default as IconCloudDemo } from "./IconCloudDemo.js";

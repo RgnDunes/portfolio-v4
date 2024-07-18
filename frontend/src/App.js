@@ -13,6 +13,7 @@ import {
   Projects,
   Recommendations,
   SkillsExperiences,
+  IconCloudDemo,
 } from "./container";
 
 import images from "./constants/images";
@@ -54,16 +55,17 @@ const App = () => {
         <>
           <ThemeToggle />
           <Navbar />
-          <Header />
+          {/* <Header />
           <About />
           <SkillsExperiences />
           <Projects />
           <Education />
           <Articles />
-          <Recommendations />
+          <Recommendations /> */}
           {/* <Certifications /> */}
           {/* <Hobbies /> */}
-          <Contact />
+          {/* <Contact /> */}
+          <IconCloudDemo />
         </>
       )}
     </div>
