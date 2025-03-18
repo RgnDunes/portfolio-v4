@@ -7,6 +7,7 @@ import "./Articles.scss";
 
 const Articles = () => {
   const [allArticles, setAllArticles] = useState([]);
+  const [renderArticles, setRenderArticles] = useState([]);
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
@@ -17,27 +18,51 @@ const Articles = () => {
     });
   }, []);
 
-  const handleFilteredArticles = () => {
-    setShowAll(!showAll);
-  };
+  useEffect(() => {
+    setRenderArticles(
+      showAll
+        ? allArticles
+        : allArticles.length > 4
+        ? allArticles.slice(0, 4)
+        : allArticles
+    );
+  }, [showAll, allArticles]);
 
   return (
-    <>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <h2 className="head-text" style={{ marginBottom: "60px" }}>
         Contributions <span>to the</span> Tech Community <br />
       </h2>
 
-      <div style={{ width: "100%" }} className="box-style padding">
-        {(allArticles.length > 4 ? allArticles.slice(0, 4) : allArticles).map(
-          (article) => (
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-evenly",
+        }}
+        className="padding scroll-container"
+      >
+        {renderArticles.map((article) => (
+          <>
             <div
-              className="app__article-item app__flex "
-              style={{ margin: "2rem" }}
+              className="article-container padding"
+              style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${urlFor(
+                  article.articleThumbnailImage
+                )})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
-              <img
-                src={urlFor(article.articleThumbnailImage)}
-                alt="article-thumbnail"
-              />
+              <a href={article.articleLink}>
+                <div className="article-info-bar padding">
+                  <div className="article-badge neon-border">
+                    {article.platform}
+                  </div>
+                  <div className="article-badge neon-border">date</div>
+                </div>
+              </a>
 
               <div className="app__article-content">
                 <h4 className="bold-text">{article.name}</h4>
@@ -45,70 +70,19 @@ const Articles = () => {
                   <h5 className="p-text">{article.description}</h5>
                 </div>
               </div>
-              <div className="app__flex">
-                <img
-                  src={urlFor(article.platformImage)}
-                  style={{
-                    marginRight: "1rem",
-                  }}
-                  alt="article-platform"
-                />
-                <a
-                  href={article.articleLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p-text"
-                >
-                  <h4 className="p-text">Read.</h4>
-                </a>
-              </div>
             </div>
-          )
-        )}
-        {allArticles.length > 4 ? (
-          <details>
-            <summary>View remaining {allArticles.length - 4} articles</summary>
-            {(allArticles.length > 4 ? allArticles.slice(4) : []).map(
-              (article) => (
-                <div
-                  className="app__article-item app__flex "
-                  style={{ margin: "2rem" }}
-                >
-                  <img
-                    src={urlFor(article.articleThumbnailImage)}
-                    alt="article-thumbnail"
-                  />
-
-                  <div className="app__article-content">
-                    <h4 className="bold-text">{article.name}</h4>
-                    <div>
-                      <h5 className="p-text">{article.description}</h5>
-                    </div>
-                  </div>
-                  <div className="app__flex">
-                    <img
-                      src={urlFor(article.platformImage)}
-                      style={{
-                        marginRight: "1rem",
-                      }}
-                      alt="article-platform"
-                    />
-                    <a
-                      href={article.articleLink}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="p-text"
-                    >
-                      <h4 className="p-text">Read.</h4>
-                    </a>
-                  </div>
-                </div>
-              )
-            )}
-          </details>
-        ) : null}
+          </>
+        ))}
       </div>
-    </>
+      <div
+        className="app__flex bold-text"
+        onClick={() => {
+          setShowAll(!showAll);
+        }}
+      >
+        <div className="btn">View All Articles</div>
+      </div>
+    </div>
   );
 };
 
