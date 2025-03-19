@@ -35,5 +35,10 @@ export default {
       title: 'ArticleLink',
       type: 'url',
     },
+    {
+      name: 'articlePostedDate',
+      title: 'ArticlePostedDate',
+      type: 'datetime',
+    },
   ],
 }
