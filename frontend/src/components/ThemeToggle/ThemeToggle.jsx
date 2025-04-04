@@ -1,62 +1,26 @@
-import React, { useState, useEffect } from "react";
-import classNames from "classnames";
+import React from "react";
+import { motion } from "framer-motion";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 import "./ThemeToggle.scss";
 
-const UnChecked = () => <>🌞</>;
-const Checked = () => <>🌜</>;
-
-const ThemeToggle = (props) => {
-  const [toggle, setToggle] = useState(true);
-  const { defaultChecked, onChange, disabled, className } = props;
-
-  useEffect(() => {
-    if (defaultChecked) {
-      setToggle(defaultChecked);
-    }
-  }, [defaultChecked]);
-
-  const triggerToggle = () => {
-    if (disabled) {
-      return;
-    }
-    setToggle(!toggle);
-  };
-
-  useEffect(() => {
-    localStorage.setItem("isLightThemeActive", toggle);
-    window.dispatchEvent(new Event("storage"));
-  }, [toggle]);
-
-  const toggleClasses = classNames(
-    "wrg-toggle",
-    {
-      "wrg-toggle--checked": toggle,
-      "wrg-toggle--disabled": disabled,
-    },
-    className
-  );
-
+const ThemeToggle = ({ isLightMode, toggleTheme }) => {
   return (
-    <div
-      onClick={triggerToggle}
-      className={`${toggleClasses} app__theme-toggle-container`}
+    <motion.button
+      className={`theme-toggle ${isLightMode ? "light" : "dark"}`}
+      onClick={toggleTheme}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      aria-label="Toggle theme"
     >
-      <div className="wrg-toggle-container">
-        <div className="wrg-toggle-check">
-          <span>{Checked()}</span>
-        </div>
-        <div className="wrg-toggle-uncheck">
-          <span>{UnChecked()}</span>
-        </div>
-      </div>
-      <div className="wrg-toggle-circle"></div>
-      <input
-        type="checkbox"
-        aria-label="Toggle Button"
-        className="wrg-toggle-input"
-      />
-    </div>
+      <motion.div
+        className="theme-toggle__icon"
+        animate={{ rotate: isLightMode ? 0 : 360 }}
+        transition={{ duration: 0.5 }}
+      >
+        {isLightMode ? <FiSun /> : <FiMoon />}
+      </motion.div>
+    </motion.button>
   );
 };
 

@@ -1,19 +1,28 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 import { NAV_ITEMS } from "./constants";
 
-const NavigationDots = ({ active }) => {
+const NavigationDots = ({ activeSection }) => {
   return (
-    <div className="app__navigation">
+    <motion.div
+      className="navigation-dots"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {NAV_ITEMS.map((item, idx) => (
-        <a
+        <motion.a
           href={`#${item}`}
           key={item + idx}
-          className="app__navigation-dot"
-          style={active === item ? { backgroundColor: "#313BAC" } : {}}
+          className={`navigation-dots__dot ${
+            activeSection === item ? "active" : ""
+          }`}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          aria-label={`Go to ${item} section`}
         />
       ))}
-    </div>
+    </motion.div>
   );
 };
 
